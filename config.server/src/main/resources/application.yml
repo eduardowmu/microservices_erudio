@@ -3,6 +3,17 @@ server:
 spring:
   application:
     name: erudio-config-server
-  profiles:
-    active:
-    - native
+#  profiles:
+#    active:
+#    - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/eduardowmu/microservices_erudio/tree/feature/spring-cloud-config/config.server #deveria ser um repositório apenas para esta aplicação
+          #se quisessemos ter repositorio privado, seria necessário inserir parametros de autenticação
+          #username:
+          #password:
+          default-label: feature/spring-cloud-config #deveria ser master
+          search-paths:
+          - 'greeting.service*'
