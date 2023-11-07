@@ -10,10 +10,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/eduardowmu/microservices_erudio/tree/feature/spring-cloud-config/config.server #deveria ser um repositório apenas para esta aplicação
-          #se quisessemos ter repositorio privado, seria necessário inserir parametros de autenticação
+          uri: https://github.com/eduardowmu/microservice_erudio_3.git
+          #se quisessemos ter repositorio privado, seria necessï¿½rio inserir parametros de autenticaï¿½ï¿½o
           #username:
           #password:
-          default-label: feature/spring-cloud-config #deveria ser master
+          default-label: main
           search-paths:
-          - 'greeting.service*'
+          - 'greeting-service*'
