@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: erudio-config-server
+#  profiles:
+#    active:
+#    - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/eduardowmu/microservice_erudio_3.git
+          #se quisessemos ter repositorio privado, seria necess�rio inserir parametros de autentica��o
+          #username:
+          #password:
+          default-label: main
+          search-paths:
+          - 'greeting-service*'
